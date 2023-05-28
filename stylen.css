@@ -1,0 +1,61 @@
+body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+.video-wrapper {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio (height:width) */
+}
+
+#video-iframe {
+  position: absolute;
+
+  width: 100%;
+  height: 105%;
+}
+
+#splash-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+#splash-screen h1 {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+  background-image: url('https://img.freepik.com/free-vector/flat-design-yellow-comics-background_23-2148798165.jpg?w=1060&t=st=1685266846~exp=1685267446~hmac=be400ba594bb6cb20b291bf8edf9888c541de5073172a434cb3c6aed3a0fcdb8');
+  background-repeat: repeat;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 20px 0;
+  animation: fadeOut 4s forwards;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+
+#content {
+  display: none;
+}
